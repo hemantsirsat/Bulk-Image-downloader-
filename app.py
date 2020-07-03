@@ -15,7 +15,7 @@ path = os.path.join(current_dir,directory)
 os.mkdir(path)
 os.chdir(path)
 
-driver = webdriver.Chrome(executable_path='/home/hemant/Desktop/ERA/chromedriver')
+driver = webdriver.Chrome(executable_path='path to chromedriver')
 
 reg_url = 'https://www.google.co.in/images'
 
@@ -48,6 +48,7 @@ soup = bs.BeautifulSoup(source,'lxml')
 
 driver.close()
 
+total = 0
 #getting/saving images
 for section in soup.find('div',class_="mJxzWe"):
     for img in section.find_all('img'):
